@@ -510,8 +510,10 @@ if __name__ == '__main__':
     sz, sy, sx = start_point
     bz, by, bx = box_size
     volume = volume[sz:sz+bz, sy:sy+by, sx:sx+bx]
-    # Convert to float32 tensor
+    # Save the volume
     volume = np.uint8(volume//256)
+    tifffile.imwrite('output/origin.tif', volume)
+    # Convert to float32 tensor
     volume = torch.from_numpy(volume).float()
 
     # Load umbilicus data

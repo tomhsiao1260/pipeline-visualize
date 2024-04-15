@@ -12,13 +12,13 @@ Install dependency
 pip install numpy torch tifffile scipy open3d opencv-python
 ```
 
-Choose a cell block [here](http://dl.ash2txt.org/full-scrolls/Scroll1.volpkg/volume_grids/20230205180739/) and run the script. It's slightly modify from ThaumatoAnakalyptor point cloud step. And will generate an `output` folder to save intermediate info as torch tensors. Checkout [here](https://github.com/schillij95/ThaumatoAnakalyptor/blob/main/documentation/ThaumatoAnakalyptor___Technical_Report_and_Roadmap.pdf) to learn more.
+Choose a cell block [here](http://dl.ash2txt.org/full-scrolls/Scroll1.volpkg/volume_grids/20230205180739/) and run the script. It's slightly modify from ThaumatoAnakalyptor point cloud step. And will generate an `output` folder to save intermediate info as torch tensors. Checkout [here](https://github.com/schillij95/ThaumatoAnakalyptor/blob/main/documentation/ThaumatoAnakalyptor___Technical_Report_and_Roadmap.pdf) to learn more. Here's an example command if you place the data in root folder.
 
 ```python
 python surface_detection.py cell_yxz_006_008_004.tif
 ```
 
-Let's visualize those tensors 🙌
+Now, let's visualize those tensors 🙌
 
 ```python
 python visualize.py

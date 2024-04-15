@@ -492,6 +492,7 @@ def get_corner_coords(start_point, cell_block_name):
     return corner_coords
 
 if __name__ == '__main__':
+    if not os.path.exists('output'): os.makedirs('output')
     args = sys.argv
 
     # Check file path
@@ -530,7 +531,6 @@ if __name__ == '__main__':
     global_reference_vector = get_reference_vector(grid_block_size, umbilicus_points, corner_coords)
 
     # Main calculation here
-    if not os.path.exists('output'): os.makedirs('output')
     recto_tensor_tuple, verso_tensor_tuple = surface_detection(volume, global_reference_vector, blur_size=11, window_size=9, stride=1, threshold_der=0.5, threshold_der2=0.002, convert_to_numpy=False)
 
     # Save point cloud

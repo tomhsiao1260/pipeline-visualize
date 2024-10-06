@@ -9,7 +9,7 @@ Try to visualize the intermediate states in [ThaumatoAnakalyptor](https://github
 Install dependency
 
 ```
-pip install numpy torch tifffile scipy open3d opencv-python
+pip install -r requirements.txt
 ```
 
 Choose a cell block [here](https://dl.ash2txt.org/full-scrolls/Scroll1/PHercParis4.volpkg/volume_grids/20230205180739/) and run the script. It's slightly modify from ThaumatoAnakalyptor point cloud step. And will generate an `output` folder to save intermediate info as torch tensors. Checkout [here](https://github.com/schillij95/ThaumatoAnakalyptor/blob/main/documentation/ThaumatoAnakalyptor___Technical_Report_and_Roadmap.pdf) to learn more. Here's an example command if you place the data in root folder.
